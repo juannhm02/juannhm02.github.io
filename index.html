@@ -1,34 +1,263 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de [Tu Nombre]</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tomás Hidalgo / FullStack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/70bea623a1.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>Bienvenido a mi Portfolio</h1>
         <nav>
-            <ul>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
+          <a href="#" class="logo"><img src="img/logoPequeño.png" alt="Logo pequeño Tomás Hidalgo"></a>
+          <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <a href="#inicio" class="nav-menu-link nav-link nav-menu-link_active">Inicio</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#sobreMi" class="nav-menu-link nav-link">Sobre mí</a>
+            </li>
+            <li class="nav-menu-item">
+                <a href="#servicios" class="nav-menu-link nav-link">Servicios</a>
+              </li>
+            <li class="nav-menu-item">
+              <a href="#proyectos" class="nav-menu-link nav-link">Proyectos</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#contacto" class="nav-menu-link nav-link ">Contacto</a>
+            </li>
+          </ul>
         </nav>
-    </header>
-    <section id="projects">
-        <h2>Proyectos</h2>
-        <!-- Lista tus proyectos aquí -->
-    </section>
-    <section id="skills">
-        <h2>Habilidades</h2>
-        <!-- Lista tus habilidades aquí -->
-    </section>
-    <section id="contact">
-        <h2>Contacto</h2>
-        <!-- Información de contacto -->
-    </section>
-    <script src="script.js"></script>
+      </header>
+    <main>
+        <div class="container">
+            <section id="inicio">
+                <div class="bgProgramacion">
+                    <img class="presentacion" src="img/imgMia.png" alt="Imagen de mi cara">
+                    <div class="presentacion">
+                        <span>Hello world!!</span>
+                        <h1>Soy Tomás Hidalgo</h1>
+                        <span id="palabraAnimada"></span>
+                    </div>
+                </div>
+            </section>
+            <section id="sobreMi">
+                <div class="curriculum">
+                    <h2>Soy Tomás Hidalgo, desarrollador web</h2>
+                    <span>Soy un desarrollador web muy joven pero con mucha experiencia en el sector informático. Con tan solo 20 años, ya tengo conocimientos en más de 5 lenguajes de programación.
+                    </span><br>
+                    <span>
+                        Esto se debe a mi gran curiosidad por aprender cada dia algo nuevo y mejorar como profesional. También poseo más aptitudes en el mundo del software ya que estoy cursando 3º de Ingeniería Informática, lo que me ha permitido compaginarmelo con un grado de Desarrollo Web.
+                    </span><br>
+                    <span>Ambas titulaciones me han ayudado a crear mi propio camino para desarrollar diversas aplicaciones en múltiples lenguajes de programación.</span>
+                    <a href="assets/curriculum.pdf" target="_blank"
+                    rel="noopener noreferrer"><span class="material-icons-outlined">download</span>Descargar CV</a>
+                </div>
+            
+                <div class="skills">
+            
+                    <div>
+                        <h2>Skills</h2>
+                        <div class="skill">
+                            <img src="img/c++.png" alt="C++ logo">
+                            <span>C++</span>
+                        </div>
+                        <div class="skill">
+                            <img src="img/java.png" alt="Java logo">
+                            <span>Java</span>
+                        </div>
+                        <div class="skill">
+                            <img src="img/javascript.png" alt="Javascript logo">
+                            <span>Javascript</span>
+                        </div>
+                        <div class="skill">
+                            <img src="img/mysql.png" alt="MySQL logo">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill">
+                            <img src="img/php.png" alt="PHP logo">
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill">
+                            <img src="img/c.png" alt="C logo">
+                            <span>C</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Otras skills</h2>
+                        <div>
+                            <div class="barraSkill"><div class="otraSkill">MongoDB</div></div>
+                            <div class="barraSkill"><div class="otraSkill">React</div></div>
+                            <div class="barraSkill"><div class="otraSkill">Docker</div></div>
+                            <div class="barraSkill"><div class="otraSkill">Hibernate</div></div>
+                            <div class="barraSkill"><div class="otraSkill">NodeJS</div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="servicios">
+                <h2>Servicios</h2>
+                <h3>Estas son algunas cualidades que ofrezco como trabajador</h3>
+                <div>
+                    <div class="softskill">
+                        <span class="icono material-icons-outlined">emoji_objects</span>
+                        <h4>Creatividad</h4>
+                        <span>
+                            Soy creativo, pienso que la creatividad es una cualidad muy infravalorada ya que es la que te diferencia del resto al realizar un software.
+                        </span>
+                    </div>
+                    <div class="softskill">
+                        <span class="icono material-icons-outlined">groups</span>
+                        <h4>Trabajo en equipo</h4>
+                        <span>
+                            Aporto mis conocimientos al resto de trabajadores y también soy muy autocrítico, lo que me ayuda a mejorar cada día.
+                        </span>
+                    </div>
+                    <div class="softskill">
+                        <span class="icono material-icons-outlined">contact_phone</span>
+                        <h4>Comunicación</h4>
+                        <span>
+                            Me gusta interesarme por el resto de mis compañeros y formar un vínculo más allá que el de compañeros de un proyecto.
+                        </span>
+                    </div>
+                    <div class="softskill">
+                        <span class="icono material-icons-outlined">report_problem</span>
+                        <h4>Resolución de problemas</h4>
+                        <span>
+                            Soy una persona que nunca deja algo por hacer, y si tengo un problema que solucionar no realizo otra actividad hasta haber acabado la anterior.
+                        </span>
+                    </div>
+                    <div class="softskill">
+                        <span class="icono material-icons-outlined">compress</span>
+                        <h4>Trabajo bajo presión</h4>
+                        <span>
+                            En general suelo trabajar bajo presión, por lo que estoy ya acostumbrado a trabajar con poco margen de tiempo.
+                        </span>
+                    </div>
+                    <div class="softskill">
+                        <span class="icono material-icons-outlined">school</span>
+                        <h4>Aprendizaje activo</h4>
+                        <span>
+                            Me encanta aprender a usar nuevas tecnologías y aportar mis conocimientos aprendidos a la comunidad.
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <section id="proyectos">
+                <div>
+                    <h2>Portfolio</h2>
+                    <h3>Estos son algunos de mis proyectos que he trabajado.</h3>
+                    <div class="proyects">
+                        <div class="proyecto">
+                            <picture>
+                                <source type="image/png" srcset="img/mastermind.png" />
+                                <img src="img/mastermind.png" alt="MasterMind en javascript" />
+                            </picture>
+                            <div class="descripcion">
+                                <a href="https://github.com/tomashm01/MasterMind"><span class="material-icons-outlined">developer_mode</span>Repositorio</a>
+                                <a href="https://tomashm01.github.io/MasterMind/"><span class="material-icons-outlined">public</span>Web</a>
+                            </div>
+                        </div>
+                        <div class="proyecto">
+                            <picture>
+                                <source type="image/png" srcset="img/calculadora.png" />
+                                <img src="img/calculadora.png" alt="Calculadora en javascript" />
+                            </picture>
+                            <div class="descripcion">
+                                <a href="https://github.com/tomashm01/calculadoraJs"><span class="material-icons-outlined">developer_mode</span>Repositorio</a>
+                                <a href="https://tomashm01.github.io/calculadoraJs/"><span class="material-icons-outlined">public</span>Web</a>
+                            </div>
+                        </div>
+                        <div class="proyecto">
+                            <picture>
+                                <source type="image/png" srcset="img/casaRural.png" />
+                                <img src="img/casaRural.png" alt="Casa Rural" />
+                            </picture>
+                            <div class="descripcion">
+                                <a href="https://github.com/tomashm01/Casa-Rural"><span class="material-icons-outlined">developer_mode</span>Repositorio</a>
+                                <a href="https://tomashm01.github.io/Casa-Rural/"><span class="material-icons-outlined">public</span>Web</a>
+                            </div>
+                        </div>
+                        <div class="proyecto">
+                            <picture>
+                                <source type="image/png" srcset="img/fruteriaHidalgo.png" />
+                                <source type="image/png" srcset="img/fruteriaHidalgoPequeño.png" />
+                                <img src="img/fruteriaHidalgo.png" alt="Fruteria Hidalgo" />
+                            </picture>
+                            <div class="descripcion">
+                                <a href="https://github.com/tomashm01/Fruteria-Hidalgo"><span class="material-icons-outlined">developer_mode</span>Repositorio</a>
+                            </div>
+                        </div>
+                        <div class="proyecto">
+                            <picture>
+                                <source type="image/png" srcset="img/gestorMaquinas.png" />
+                                <img src="img/gestorMaquinas.png" alt="Gestor de máquinas en c++" />
+                            </picture>
+                            <div class="descripcion">
+                                <a href="https://github.com/tomashm01/Gestor-de-maquinas"><span class="material-icons-outlined">developer_mode</span>Repositorio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contacto">
+                <div>
+                    <h2>Contacto</h2>
+                    <h3>Ponte en contacto conmigo con algunas de estas redes.</h3>
+                    <div class="contactos">
+                        <a href="https://github.com/tomashm01">
+                            <div>
+                                <i class="fa-brands fa-github"></i>
+                                <p>Github</p>
+                            </div>
+                        </a>
+                        <a href="mailto:tomashidalgomartin@gmail.com">
+                            <div>
+                                <i class="fa-solid fa-envelope"></i>
+                                <p>Correo electrónico</p>
+                            </div>
+                        </a>
+                        <a href="https://twitter.com/tomas_hm01">
+                            <div>
+                                <i class="fa-brands fa-twitter"></i>
+                                <p>Twitter</p>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tomas-hidalgo-083b0a1b1/">
+                            <div>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <p>Linkedin</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <div>
+            <div>
+                <p>Copyright &copy; 2022. </p>
+                <a href="#">@tomashm01</a>
+            </div>
+            <p>Todos los derechos reservados</p>
+        </div>
+    </footer>
 </body>
 </html>
