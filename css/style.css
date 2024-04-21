@@ -93,3 +93,72 @@ button:hover, .button:hover {
 .dark-theme a {
     color: white; /* Asegurarse que los enlaces son visibles en tema oscuro */
 }
+
+@media (min-width: 850px) {
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      height: 80px;
+    }
+    header nav .nav-toggle {
+      color: white;
+      background: none;
+      border: none;
+      font-size: 30px;
+      padding: 0 20px;
+      cursor: pointer;
+      display: none;
+    }
+    header nav .nav-menu {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      margin-right: 5%;
+      list-style: none;
+      margin: 0px;
+      position: sticky;
+      height: 80px;
+    }
+  }
+  
+  .bgProgramacion {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/bg.jpg");
+    background-size: auto;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bgProgramacion img {
+    width: 250px;
+    height: 250px;
+    margin-right: 1%;
+    animation: opacidad 0.5s;
+  }
+  
+  .bgProgramacion .presentacion {
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    animation: opacidad 0.5s;
+  }
+  
+  .bgProgramacion .presentacion h1 {
+    color: #313cd1;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .bgProgramacion .presentacion span {
+    font-size: 1.5rem;
+    min-height: 30px;
+  }
+  
