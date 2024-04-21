@@ -16,7 +16,9 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 10px 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;;
     text-align: center;
 }
 
@@ -152,12 +154,13 @@ button:hover, .button:hover {
   }
   
   .bgProgramacion .presentacion h1 {
-    color: #313cd1;
+    color: #0ff8f8;
     font-size: 2rem;
     margin: 0;
   }
   
   .bgProgramacion .presentacion span {
+    color: #07f5b9;
     font-size: 1.5rem;
     min-height: 30px;
   }
