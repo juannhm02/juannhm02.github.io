@@ -1,25 +1,77 @@
+/* Reset básico para margenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
 }
 
 header {
-    background-color: #f8f9fa;
-    padding: 1em 0;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
     text-align: center;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
 nav ul {
+    background: #555;
     list-style: none;
-    padding: 0;
+    text-align: center;
+    padding: 10px 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: inline-block;
 }
 
 section {
+    background: white;
     margin: 20px 0;
     padding: 20px;
-    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+}
+
+/* Estilos adicionales para botones y enlaces */
+button, .button {
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover, .button:hover {
+    background-color: #4cae4c;
 }
