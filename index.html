@@ -8,16 +8,32 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenido a mi Portfolio</h1>
         <nav>
-            <ul>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contact">Contacto</a></li>
+            <a href="#" class="logo"><img src="img/logoPequeño.png" alt="Logo pequeño Tomás Hidalgo"></a>
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="#inicio" class="nav-menu-link nav-link nav-menu-link_active">Inicio</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#sobreMi" class="nav-menu-link nav-link">Sobre mí</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#servicios" class="nav-menu-link nav-link">Servicios</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#proyectos" class="nav-menu-link nav-link">Proyectos</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#contacto" class="nav-menu-link nav-link ">Contacto</a>
+                </li>
             </ul>
         </nav>
-        <button id="change-theme-btn" onclick="toggleDarkTheme()">Cambiar tema</button>
-    </header>
+        <!-- Botón para cambiar el tema -->
+        <button id="change-theme-btn" onclick="toggleDarkTheme()" style="margin: 10px; padding: 10px 20px;">Cambiar tema</button>
+    </header>    
     <section id="projects">
         <h2>Proyectos</h2>
         <!-- Lista tus proyectos aquí -->

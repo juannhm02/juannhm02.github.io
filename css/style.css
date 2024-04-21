@@ -75,3 +75,21 @@ button, .button {
 button:hover, .button:hover {
     background-color: #4cae4c;
 }
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Esconde el menú en dispositivos pequeños */
+    }
+    .nav-toggle {
+        display: block; /* Muestra el botón del menú en dispositivos pequeños */
+    }
+}
+
+.dark-theme {
+    background-color: #333; /* Fondo oscuro para el tema oscuro */
+    color: white; /* Texto blanco para el tema oscuro */
+}
+
+.dark-theme a {
+    color: white; /* Asegurarse que los enlaces son visibles en tema oscuro */
+}
