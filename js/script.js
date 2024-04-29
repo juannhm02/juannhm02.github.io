@@ -6,8 +6,9 @@
         Hibernate:['#FFBF00',"40%"],
         NodeJS:['#6DA55F',"30%"]
     };
+
     const palabras = ['Presidente del CEEPS', 'Ingeniero Informático','Desarrollador Web'];
-    
+
     document.addEventListener('DOMContentLoaded',function(){    
         animarMenu();
         animarPalabra();
@@ -107,40 +108,35 @@
         });
     }
 
-    const animarPalabra=function(){
-        
-        let palabraAnimada = document.getElementById('palabraAnimada'),
-        palabraAnimadaContent = palabraAnimada.innerHTML,
-        addingWord = false,
+    const animarPalabra = function() {
+    let palabraAnimada = document.getElementById('palabraAnimada'),
+        palabraAnimadaContent = '',
+        addingWord = true,
         counter = 0;
 
-        setInterval(function(){
+    setInterval(function() {
+        if(palabraAnimadaContent.length > 0 && !addingWord) {
+            palabraAnimada.innerHTML = palabraAnimadaContent.slice(0, -1);
+            palabraAnimadaContent = palabraAnimada.innerHTML;
+        } else {
+            addingWord = true;
+        }
 
-            if(palabraAnimadaContent.length > 0 && !addingWord ) {
-              palabraAnimada.innerHTML = palabraAnimadaContent.slice(0, -1);
-              palabraAnimadaContent = palabraAnimada.innerHTML;
-            } else {
-              addingWord = true;
-            }
-        
-            if( addingWord ){
-              if( palabraAnimadaContent.length < palabras[counter].length  ) {
+        if(addingWord) {
+            if(palabraAnimadaContent.length < palabras[counter].length) {
                 palabraAnimada.innerHTML = palabras[counter].slice(0, palabraAnimadaContent.length + 1);
                 palabraAnimadaContent = palabraAnimada.innerHTML;
-              } else {
-                if( counter < palabras.length) {
-                  counter ++
+            } else {
+                if(counter < palabras.length - 1) {
+                    counter++;
+                } else {
+                    counter = 0;
                 }
                 addingWord = false;
-              }
             }
-
-            if( counter == palabras.length) {
-              counter = 0;
-            }
-      
-        }, 200);
-    }
+        }
+    }, 200);
+  }
      
     
 }

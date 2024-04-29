@@ -13,12 +13,85 @@ body {
 }
 
 header {
-    background: #333;
+    background: #0f172a;
     color: #fff;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;;
+    top: 0;
     text-align: center;
+    box-shadow: 0 8px 16px -4px #1b233d;
+}
+
+header nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav .nav-toggle:focus:not(:focus-visible) {
+  outline: none;
+}
+
+header nav .nav-toggle {
+  display: block;
+  font-size: 30px;
+  border: 0;
+  margin-right: 20px;
+  padding: 0;
+  background-color: transparent;
+  color: #e6f1f5;
+}
+
+header nav .nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background-color: #0f172a;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  padding: 0;
+  height: calc(100% - 80px);
+  overflow-y: auto;
+  left: 100%;
+  transition: left 0.3s;
+}
+
+header nav .nav-menu .nav-menu-item {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  width: max-content;
+}
+
+header nav .nav-menu .nav-menu-item a {
+  color: #e6f1f5;
+  text-decoration: none;
+}
+
+header nav .nav-menu .nav-menu-item .nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+header nav .nav-menu .nav-menu-item .nav-menu-link:hover,
+header nav .nav-menu .nav-menu-item .nav-menu-link_active {
+  background-color: #313cd1;
+  transition: 0.5s;
+}
+
+header nav .nav-menu-link:hover,
+header nav .nav-menu-link_active {
+  background: none;
+  color: #313cd1;
+  transition: left 0.3s;
+}
+
+header nav .nav-menu_visible {
+  left: 0;
+  transition: left 0.3s;
 }
 
 header h1 {
@@ -39,15 +112,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #e6f1f5;
     padding: 15px 20px;
-    display: inline-block;
 }
 
 section {
-    background: white;
-    margin: 20px 0;
-    padding: 20px;
+    background: #e6f1f5;
     border-radius: 8px;
 }
 
@@ -55,14 +125,14 @@ footer {
     text-align: center;
     padding: 10px 0;
     background: #333;
-    color: white;
+    color: #e6f1f5;
 }
 
 /* Estilos adicionales para botones y enlaces */
 button, .button {
     background-color: #5cb85c;
     border: none;
-    color: white;
+    color: #e6f1f5;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -77,6 +147,11 @@ button:hover, .button:hover {
     background-color: #4cae4c;
 }
 
+.projectURL{
+  color: #e6f1f5;
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         display: none; /* Esconde el menú en dispositivos pequeños */
@@ -88,11 +163,11 @@ button:hover, .button:hover {
 
 .dark-theme {
     background-color: #333; /* Fondo oscuro para el tema oscuro */
-    color: white; /* Texto blanco para el tema oscuro */
+    color: #e6f1f5; /* Texto blanco para el tema oscuro */
 }
 
 .dark-theme a {
-    color: white; /* Asegurarse que los enlaces son visibles en tema oscuro */
+    color: #e6f1f5; /* Asegurarse que los enlaces son visibles en tema oscuro */
 }
 
 @media (min-width: 850px) {
@@ -104,7 +179,7 @@ button:hover, .button:hover {
       height: 80px;
     }
     header nav .nav-toggle {
-      color: white;
+      color: #e6f1f5;
       background: none;
       border: none;
       font-size: 30px;
@@ -127,8 +202,9 @@ button:hover, .button:hover {
   .bgProgramacion {
     width: 100%;
     height: 100vh;
+    padding: 0;
     background-image: url("../img/background.jpg");
-    background-size: auto;
+    background-size: cover;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
@@ -137,14 +213,13 @@ button:hover, .button:hover {
   }
   
   .bgProgramacion img {
-    width: 250px;
-    height: 250px;
+    width: 300px;
     margin-right: 1%;
     animation: opacidad 0.5s;
   }
   
   .bgProgramacion .presentacion {
-    color: white;
+    color: #e6f1f5;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -153,13 +228,13 @@ button:hover, .button:hover {
   }
   
   .bgProgramacion .presentacion h1 {
-    color: #0ff8f8;
+    color: #049fbb;
     font-size: 2rem;
     margin: 0;
   }
   
   .bgProgramacion .presentacion span {
-    color: #07f5b9;
+    color: #e6f1f5;
     font-size: 1.5rem;
     min-height: 30px;
   }
@@ -174,6 +249,12 @@ button:hover, .button:hover {
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   
+  .cardContainer{
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
   .card:hover {
     transform: scale(1.05);
   }
@@ -191,12 +272,34 @@ button:hover, .button:hover {
     border-bottom-right-radius: 10px;
     height: 30px;
     width: 130px;
-    background: white;
+    background: #e6f1f5;
     background: #1b233d;
     position: relative;
     transform: skew(-40deg);
     box-shadow: -10px -10px 0 0 #1b233d;
   }
+
+  .card .top-section .icons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card .top-section .contentProject {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: center; /* Alinea horizontalmente */
+    height: 100%; /* Asegúrate de que el contenedor tenga altura para que el centrado vertical funcione */
+}
+.contentProject .mailmanImage {
+  max-width: 90%; /* o el porcentaje que se ajuste mejor */
+  max-height: 90%; /* o el porcentaje que se ajuste mejor */
+  height: auto; /* mantiene la proporción de la imagen */
+  width: auto; /* mantiene la proporción de la imagen */
+}
+
   
   .card .top-section .border::before {
     content: "";
@@ -222,41 +325,6 @@ button:hover, .button:hover {
     box-shadow: -5px -5px 0 2px #1b233d;
   }
   
-  .card .top-section .icons {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .card .top-section .icons .logo {
-    height: 100%;
-    aspect-ratio: 1;
-    padding: 7px 0 7px 15px;
-  }
-  
-  .card .top-section .icons .logo .top-section {
-    height: 100%;
-  }
-  
-  .card .top-section .icons .social-media {
-    height: 100%;
-    padding: 8px 15px;
-    display: flex;
-    gap: 7px;
-  }
-  
-  .card .top-section .icons .social-media .svg {
-    height: 100%;
-    fill: #1b233d;
-  }
-  
-  .card .top-section .icons .social-media .svg:hover {
-    fill: white;
-  }
-  
   .card .bottom-section {
     margin-top: 15px;
     padding: 10px 5px;
@@ -266,7 +334,7 @@ button:hover, .button:hover {
     display: block;
     font-size: 17px;
     font-weight: bolder;
-    color: white;
+    color: #e6f1f5;
     text-align: center;
     letter-spacing: 2px;
   }
@@ -296,4 +364,44 @@ button:hover, .button:hover {
   .card .bottom-section .row .item:nth-child(2) {
     border-left: 1px solid rgba(255, 255, 255, 0.126);
     border-right: 1px solid rgba(255, 255, 255, 0.126);
+  }
+
+
+  #sobreMi .curriculum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2%;
+  }
+  
+  #sobreMi .curriculum h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  #sobreMi .curriculum span {
+    font-size: 1.1rem;
+    color: #4d4d4d;
+  }
+  
+  #sobreMi .curriculum a {
+    text-decoration: none;
+    color: #313cd1;
+    background-color: #313cd1;
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  
+  #sobreMi .curriculum a span {
+    color: white;
+  }
+  
+  #sobreMi .curriculum a:hover {
+    background-color: #4d4d4d;
   }
