@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Higuera's personal</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -28,9 +31,6 @@
                     <a href="#proyectos" class="nav-menu-link nav-link">Proyectos</a>
                 </li>
                 <li class="nav-menu-item">
-                    <a href="#foro" class="nav-menu-link nav-link">Foro</a>
-                </li>
-                <li class="nav-menu-item">
                     <a href="#contacto" class="nav-menu-link nav-link ">Contacto</a>
                 </li>
             </ul>
@@ -38,7 +38,7 @@
     </header>
     
     <main>
-            <section id="inicio">
+            <div id="inicio">
                 <div class="bgProgramacion">
                     <img class="presentacion" src="img/YO.png" alt="Imagen mía">
                     <div class="presentacion">
@@ -47,9 +47,9 @@
                         <span id="palabraAnimada"></span>
                     </div>
                 </div>
-            </section>
+              </div>
 
-            <section id="sobreMi">
+            <section id="sobreMi" class="about-skills-container">
               <div class="aboutMe">
                 <h2>Sobre Mi</h2>
                 <span>Soy un joven estudiante al cual le apasiona el mundo de la informática y con 22 años de los cuales actualmente cuatro de ellos han sido para formarme en el ámbito del Software.
@@ -58,9 +58,36 @@
                   Me gustaría encontrar un empleo de Frontend, para así poder obtener un conocimiento más amplio acerca de ello y poder aplicar todo aquello que se.
                 </span><br>
                 <span>Además de mucha pasión por aquello que he estudiado, también son las ganas de querer comerme el mundo las que me llevan al éxito personal y profesional.</span>
-                <a href="assets/CV_Juan_Higuera.pdf" target="_blank"
-                rel="noopener noreferrer"><span class="material-icons-outlined">download</span>Descargar CV</a>
+                <a href="assets/CV_Juan_Higuera.pdf" target="_blank"> <img src="img/download.svg" width="15" height="15"/> Descarga mi CV</a>
             </div>
+
+            <div class="skills">
+              <div class="category">
+                  <h3>Lenguajes de Programación y Frameworks</h3>
+                  <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+                  <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C">
+                  <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
+                  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React">
+                  <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJS">
+                  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+              </div>
+              <div class="category">
+                  <h3>Bases de Datos</h3>
+                  <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+                  <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+              </div>
+              <div class="category">
+                  <h3>Herramientas y Otros</h3>
+                  <img src="https://img.shields.io/badge/Sublime_Text-FF9800?style=for-the-badge&logo=sublime-text&logoColor=white" alt="Sublime Text">
+                  <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VSCode">
+                  <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu">
+                  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+                  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+                  <img src="https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+                  <img src="https://img.shields.io/badge/OpenAI-000000?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI">
+              </div>
+          </div>
+          
             </section>
 
             <section id="empleabilidad">
@@ -80,12 +107,12 @@
                         <img src="img/c++.svg" width="25" height="25"/>
                       </div>
                       <div class="contentProject">
-                        <img src="img/mailman.png" class="mailmanImage"/>
+                        <span class="title">Mailman Actividades Extracurriculares</span>
                       </div>
                     </div>
                     
                     <div class="bottom-section">
-                      <span class="title">Mailman Actividades Extracurriculares</span>
+                      <span class="title">Gestión de un sistema de mailing entre universidades para actividades extracurriculares. Muestra, gracias a un menú por terminal, el resultado.</span>
                       <div class="row row1">
                         <div class="item">
                           <span class="big-text">Repositorio</span>
@@ -103,28 +130,133 @@
                       <div class="icons"> 
                         <img src="img/c++.svg" width="25" height="25"/>
                       </div>
+                      <div class="contentProject">
+                        <span class="title">Gestor de máquinas</span>
+                      </div>
                     </div>
-
+                    
                     <div class="bottom-section">
-                      <span class="title">Mailman Actividades Extracurriculares</span>
+                      <span class="title">App creada para reserva de clústers en C++.</span>
                       <div class="row row1">
                         <div class="item">
                           <span class="big-text">Repositorio</span>
-                          <span class="regular-text">UI elements</span>
+                          <span class="regular-text">
+                            <a href="https://github.com/juannhm02/Gestor-de-maquinas" target="_blank" class="projectURL"> <img src="img/chain.svg" width="15" height="15"/> Accede aquí</a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="top-section">
+                      <div class="border"></div>
+                      <div class="icons"> 
+                        <img src="img/django.svg" width="25" height="25"/>
+                        <img src="img/react.svg" width="25" height="25"/>
+                      </div>
+                      <div class="contentProject">
+                        <span class="title">Countrle</span>
+                      </div>
+                    </div>
+
+                    <div class="bottom-section">
+                      <span class="title">Countrle es una aplicación web basada en Wordle. Los jugadores se desafían a adivinar conceptos relacionados con países.</span>
+                      <div class="row row1">
+                        <div class="item">
+                          <span class="big-text">Repositorio</span>
+                          <span class="regular-text">
+                            <a href="https://github.com/juannhm02/Countrle" target="_blank" class="projectURL"> <img src="img/chain.svg" width="15" height="15"/> Accede aquí</a>
+                          </span>
                         </div>
                         <div class="item">
-                          <span class="big-text">100%</span>
-                          <span class="regular-text">Free for use</span>
+                          <span class="big-text">Web</span>
+                          <span class="regular-text">
+                            <a href="https://countrle.netlify.app/" target="_blank" class="projectURL"> <img src="img/chain.svg" width="15" height="15"/> Accede aquí</a>
+                          </span> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="top-section">
+                      <div class="border"></div>
+                      <div class="icons"> 
+                        <img src="img/nestjs.svg" width="25" height="25"/>
+                        <img src="img/typescript.svg" width="25" height="25"/>
+                        <img src="img/docker.svg" width="25" height="25"/>
+                      </div>
+                      <div class="contentProject">
+                        <span class="title">UCOLib</span>
+                      </div>
+                    </div>
+                    
+                    <div class="bottom-section">
+                      <span class="title">Aplicación móvil para creación y gestión de servicios del lado del servidor. Ideal para aplicaciones empresariales y servicios web.</span>
+                      <div class="row row1">
+                        <div class="item">
+                          <span class="big-text">Repositorio</span>
+                          <span class="regular-text">
+                            <a href="https://github.com/juannhm02/UcoLib" target="_blank" class="projectURL"> <img src="img/chain.svg" width="15" height="15"/> Accede aquí</a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="top-section">
+                      <div class="border"></div>
+                      <div class="icons"> 
+                        <img src="img/python.svg" width="25" height="25"/>
+                      </div>
+                      <div class="contentProject">
+                        <span class="title">Clasificación Inmuebles y Evaluación Inmigración</span>
+                      </div>
+                    </div>
+                    
+                    <div class="bottom-section">
+                      <span class="title">Metodología CommonKADS, construcción de sistemas de conocimiento. Permite estructurar de manera efectiva la adquisición y aplicación de conocimiento en los sistemas desarrollados.</span>
+                      <div class="row row1">
+                        <div class="item">
+                          <span class="big-text">Repositorio</span>
+                          <span class="regular-text">
+                            <a href="https://github.com/juannhm02/trabajoClasificacion" target="_blank" class="projectURL"> <img src="img/chain.svg" width="15" height="15"/> Accede aquí</a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="top-section">
+                      <div class="border"></div>
+                      <div class="icons"> 
+                        <img src="img/java.svg" width="25" height="25"/>
+                        <img src="img/js.svg" width="25" height="25"/>
+                        <img src="img/html.svg" width="25" height="25"/>
+                        <img src="img/css.svg" width="25" height="25"/>
+                      </div>
+                      <div class="contentProject">
+                        <span class="title">Reserva de pistas</span>
+                      </div>
+                    </div>
+                    
+                    <div class="bottom-section">
+                      <span class="title">Gestor de reservas de pistas de baloncesto</span>
+                      <div class="row row1">
+                        <div class="item">
+                          <span class="big-text">Repositorio</span>
+                          <span class="regular-text">
+                            <a href="https://github.com/juannhm02/MailingActividadesExtracurriculares" target="_blank" class="projectURL"> <img src="img/chain.svg" width="15" height="15"/> Accede aquí</a>
+                          </span>
                         </div>
                       </div>
                     </div>
                   </div>
 
                 </div>
-            </section>
-            <section id="foro">
-                <h2>Foro</h2>
-                <!-- Lista tus habilidades aquí -->
             </section>
             <section id="contacto">
                 <h2>Contacto</h2>
@@ -140,5 +272,29 @@
 
         
     </main>
+
+    <footer>
+      <nav>
+          <ul class="nav-menu">
+              <li class="nav-menu-item">
+                  <a href="#inicio" class="nav-menu-link nav-link">Inicio</a>
+              </li>
+              <li class="nav-menu-item">
+                  <a href="#sobreMi" class="nav-menu-link nav-link">Sobre mí</a>
+              </li>
+              <li class="nav-menu-item">
+                  <a href="#empleabilidad" class="nav-menu-link nav-link">Empleabilidad</a>
+              </li>
+              <li class="nav-menu-item">
+                  <a href="#proyectos" class="nav-menu-link nav-link">Proyectos</a>
+              </li>
+              <li class="nav-menu-item">
+                  <a href="#contacto" class="nav-menu-link nav-link">Contacto</a>
+              </li>
+          </ul>
+          <p>© 2024. Diseñado por Juan Higuera Mohedano.</p>
+      </nav>
+  </footer>
+  
 </body>
 </html>

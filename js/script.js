@@ -1,18 +1,9 @@
 {
-    const fwSkills={
-        MongoDB:['#01DF01',"70%"],
-        React: ['#81DAF5',"30%"],
-        Docker:['#0080FF',"50%"],
-        Hibernate:['#FFBF00',"40%"],
-        NodeJS:['#6DA55F',"30%"]
-    };
-
     const palabras = ['Presidente del CEEPS', 'Ingeniero Informático','Desarrollador Web'];
 
     document.addEventListener('DOMContentLoaded',function(){    
         animarMenu();
         animarPalabra();
-        animarSkill();
         scrollMenu();
         scrollViewport();
     });
@@ -38,12 +29,12 @@
           if($(document).scrollTop()<=$("#sobreMi").offset().top-5 && $(document).scrollTop()>0 ){
             resetActiveClass();
             $("a[href='#inicio']").addClass("nav-menu-link_active");
-          }else if($(document).scrollTop()<=$("#servicios").offset().top-5 && $(document).scrollTop()>=$("#sobreMi").offset().top){
+          }else if($(document).scrollTop()<=$("#empleabilidad").offset().top-5 && $(document).scrollTop()>=$("#sobreMi").offset().top){
             resetActiveClass();
             $("a[href='#sobreMi']").addClass("nav-menu-link_active");
-          }else if($(document).scrollTop()<=$("#proyectos").offset().top-5 && $(document).scrollTop()>=$("#servicios").offset().top){
+          }else if($(document).scrollTop()<=$("#proyectos").offset().top-5 && $(document).scrollTop()>=$("#empleabilidad").offset().top){
             resetActiveClass();
-            $("a[href='#servicios']").addClass("nav-menu-link_active");
+            $("a[href='#empleabilidad']").addClass("nav-menu-link_active");
           }else if($(document).scrollTop()<=$("#contacto").offset().top-5 && $(document).scrollTop()>=$("#proyectos").offset().top){
             resetActiveClass();
             $("a[href='#proyectos']").addClass("nav-menu-link_active");
@@ -89,23 +80,6 @@
           }
         });
       });
-    }
-
-    const animarSkill=function(){
-        let otraSkill=document.querySelectorAll('.otraSkill');  
-        let barraSkill=document.querySelectorAll('.barraSkill');
-
-        otraSkill.forEach((elemento,index)=>{
-            let nombreSkill=otraSkill[index].textContent;
-            elemento.style.backgroundColor=fwSkills[nombreSkill][0];
-            elemento.style.border="2px solid black";
-            elemento.style.width=fwSkills[nombreSkill][1];
-        });
-
-        barraSkill.forEach((elemento,index)=>{
-            let nombreSkill=otraSkill[index].textContent;
-            elemento.style.backgroundColor=fwSkills[nombreSkill][0];
-        });
     }
 
     const animarPalabra = function() {
