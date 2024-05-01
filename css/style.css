@@ -252,7 +252,7 @@ button:hover, .button:hover {
     display:flex;
     flex-direction: row;
     justify-content: center;
-
+    flex-wrap: wrap;
     gap: 20px;
     margin-top: 10px;
     margin-left: 20px;
@@ -506,7 +506,7 @@ section { /* Usa un selector que apunte a todas las secciones principales */
   min-height: 100vh; /* Esto asegura que cada sección tenga al menos la altura de la ventana */
   width: 100%; /* Asegura que todas las secciones ocupen el ancho completo */
   margin: 0 auto; /* Centra la sección si tiene un max-width */
-  padding: 200px;
+  padding: 10%;
 }
 
 footer {
